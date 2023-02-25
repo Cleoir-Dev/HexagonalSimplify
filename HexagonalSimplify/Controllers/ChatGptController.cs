@@ -1,4 +1,4 @@
-﻿using Domain.Entities;
+﻿using Domain.Entities.ChatGpt;
 using Domain.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,10 +15,10 @@ namespace Api.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> Chat(string prompt)
+        public async Task<IActionResult> Chat(string question)
         {
 
-            var chat = await _chatGptService.Communication(new ChatGpt { prompt = prompt }) ;
+            var chat = await _chatGptService.Communication(new RequestGpt { inputTxt = question });
 
             return Ok(chat.choices[0].text);
         }

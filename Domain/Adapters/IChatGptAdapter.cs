@@ -1,9 +1,9 @@
-﻿using Domain.Entities;
+﻿using Domain.Entities.ChatGpt;
 
 namespace Domain.Adapters
 {
     public interface IChatGptAdapter
     {
-        Task<ResponseGpt> Connection(ChatGpt chatGpt);
+        Task<ResponseGpt> RequestAsync(RequestGpt chatGpt);
     }
 }

@@ -22,9 +22,11 @@ builder.Services.AddHttpClient("GitHub", httpClient =>
         HeaderNames.UserAgent, "HttpRequestsSample");
 });
 
-
+// Inject dependency
 builder.Services.AddTransient<IChatGptAdapter, ChatGptAdapter>();
 builder.Services.AddTransient<IChatGptService, ChatGptService>();
+builder.Services.AddTransient<ISpeechAdapter, SpeechAdapter>();
+builder.Services.AddTransient<ISpeechService, SpeechService>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

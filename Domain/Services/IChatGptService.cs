@@ -1,9 +1,9 @@
-﻿using Domain.Entities;
+﻿using Domain.Entities.ChatGpt;
 
 namespace Domain.Services
 {
     public interface IChatGptService
     {
-        Task<ResponseGpt> Communication(ChatGpt chatGpt);
+        Task<ResponseGpt> Communication(RequestGpt chatGpt);
     }
 }
