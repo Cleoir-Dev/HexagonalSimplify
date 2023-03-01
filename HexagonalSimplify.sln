@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "HexagonalSimplify\Api.csproj", "{61D27D89-9991-4F60-98EA-0E71B9AF87C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "HexagonalSimplify\Api.csproj", "{61D27D89-9991-4F60-98EA-0E71B9AF87C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{05624382-4EE6-42F5-8ED6-FBB49E562053}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{05624382-4EE6-42F5-8ED6-FBB49E562053}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{1A608204-6756-4F2F-971F-0ED3D0C85F1E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{1A608204-6756-4F2F-971F-0ED3D0C85F1E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Adapters", "Adapters", "{FA4AA7BB-3453-4675-BF74-41C006F5E2BA}"
 EndProject
@@ -17,7 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Driving", "Driving", "{7AED
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{411EBD4E-428A-4C0D-A0F8-1E516487921B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infra.ChatGPT", "Infra.ChatGPT\Infra.ChatGPT.csproj", "{55955E96-5E55-4B3A-80B8-E1354373E562}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infra", "Infra.ChatGPT\Infra.csproj", "{55955E96-5E55-4B3A-80B8-E1354373E562}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

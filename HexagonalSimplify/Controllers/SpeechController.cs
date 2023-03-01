@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/speech")]
     [ApiController]
     public class SpeechController : ControllerBase
     {
@@ -15,7 +15,7 @@ namespace Api.Controllers
             _speechService = speechService;
         }
 
-        [HttpPost]
+        [HttpPost("text-to-speech")]
         public async Task<IActionResult> TextToSpeech(string text)
         {
             var result = await _speechService.TextToSpeech(new RequestSpeech { text = text });
