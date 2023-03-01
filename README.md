@@ -1,1 +1,3 @@
 # HexagonalSimplify
+
+![Screenshot](Picture.png)
