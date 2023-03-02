@@ -19,11 +19,12 @@ namespace Application.Services
 
         public async Task<ResponseGpt> Communication(RequestGpt chatGpt)
         {
-            // Detalhamento de resposta de saida e tambem a concordancia verbal.
+            // Output response detailing and also verbal agreement.
             chatGpt.formatTxt = "text-davinci-003";
-            //A precisao é o acerto na resposta vai de 0 a 2 quanto menor mais preciso.
+            // Precision is the correct answer ranging from 0 to 2, the smaller, the more accurate.
             chatGpt.precision = 0;
-            //Quantidade de caracteres retornados no text. Exemplo 4 caracteres representa 1 para chatGpt.
+            // Number of characters returned in the text. Example 4 characters represents 1 for chatGpt.
+            // The accuracy is the correct response ranges from 0 to 2, the smaller, the more accurate.
             chatGpt.qtdCaract = 2048;
 
 

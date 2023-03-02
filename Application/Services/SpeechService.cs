@@ -15,9 +15,9 @@ namespace Application.Services
 
         public async Task<ResponseSpeech> TextToSpeech(RequestSpeech requestSpeech)
         {
-            // Recebe o id do timbre de voz
+            // Get the voice timbre id
             requestSpeech.voiceId = "21m00Tcm4TlvDq8ikWAM";
-            // Parametros equalizar o som
+            // Parameters equalize the sound
             requestSpeech.voiceSettings = new VoiceSettings
             {
                 similarityBoost = 0.6,
