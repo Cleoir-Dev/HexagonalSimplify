@@ -73,11 +73,11 @@ Use Swagger to test this end-points:
 
 For questions and answer:
 
-![N|Solid](pic2.png)
+![N|Solid](pic2.PNG)
 
 For questions and answer in speech:
 
-![N|Solid](pic3.png)
+![N|Solid](pic3.PNG)
 
 
 ## License
