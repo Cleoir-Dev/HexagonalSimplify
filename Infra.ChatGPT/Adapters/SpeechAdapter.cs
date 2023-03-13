@@ -21,8 +21,6 @@ namespace Infra.ChatGPT.Adapters
 
         public async Task<ResponseSpeech> RequestAsync(RequestSpeech requestSpeech)
         {
-            var result = new RequestSpeech();
-
             var response = await _httpClient.PostAsync($"https://api.elevenlabs.io/v1/text-to-speech/{requestSpeech.voiceId}",
                 new StringContent(JsonSerializer.Serialize(requestSpeech),
             Encoding.UTF8, "application/json"));
@@ -50,7 +48,7 @@ namespace Infra.ChatGPT.Adapters
                 return new ResponseSpeech
                 {
                     IsSuccess = false,
-                    ErrorMessage = $"Erro ao converter texto para áudio: {errorMessage}"
+                    ErrorMessage = $"Error in the convert text to audio: {errorMessage}"
                 };
             }
         }

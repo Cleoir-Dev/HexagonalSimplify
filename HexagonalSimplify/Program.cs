@@ -1,6 +1,7 @@
 using Application.Services;
 using Domain.Adapters;
 using Domain.Services;
+using Infra.Adapters;
 using Infra.ChatGPT.Adapters;
 using Microsoft.Net.Http.Headers;
 
@@ -25,8 +26,12 @@ builder.Services.AddHttpClient("GitHub", httpClient =>
 // Inject dependency
 builder.Services.AddTransient<IChatGptAdapter, ChatGptAdapter>();
 builder.Services.AddTransient<IChatGptService, ChatGptService>();
+
 builder.Services.AddTransient<ISpeechAdapter, SpeechAdapter>();
 builder.Services.AddTransient<ISpeechService, SpeechService>();
+
+builder.Services.AddTransient<IWhisperService, WhisperService>();
+builder.Services.AddTransient<IWhisperAdapter, WhisperAdapter>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
