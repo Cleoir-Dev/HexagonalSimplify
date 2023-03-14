@@ -51,7 +51,7 @@ namespace Api.Controllers
             }
         }
 
-        [HttpPost("translate-audio-to-portugues")]
+        [HttpPost("translate-audio-to-pt-br")]
         public async Task<IActionResult> TranslateAudioToPortugues(string urlAudio)
         {
             var result = await _whisperService.AudioPortugueseBR(new RequestWhisper
