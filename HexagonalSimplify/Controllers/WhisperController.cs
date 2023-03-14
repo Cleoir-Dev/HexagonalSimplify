@@ -50,5 +50,25 @@ namespace Api.Controllers
                 return BadRequest(result.ErrorMessage);
             }
         }
+
+        [HttpPost("translate-audio-to-portugues")]
+        public async Task<IActionResult> TranslateAudioToPortugues(string urlAudio)
+        {
+            var result = await _whisperService.AudioPortugueseBR(new RequestWhisper
+            {
+                audio = new AudioWhisper { whisper = urlAudio },
+            });
+
+            if (result.IsSuccess)
+            {
+                var memoryStream = new MemoryStream(result.Content);
+                memoryStream.Position = 0;
+                return File(memoryStream, "audio/mpeg", result.FileName);
+            }
+            else
+            {
+                return BadRequest(result.ErrorMessage);
+            }
+        }
     }
 }

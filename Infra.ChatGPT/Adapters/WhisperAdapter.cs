@@ -25,7 +25,7 @@ namespace Infra.Adapters
 
         public async Task<ResponseWhisper> PostAsync(RequestWhisper requestWhisper)
         {
-
+ 
             var response = await _httpClient.PostAsync($"{REPLICATE_URL_API}",
                 new StringContent(JsonSerializer.Serialize(requestWhisper),
             Encoding.UTF8, "application/json"));
@@ -35,6 +35,7 @@ namespace Infra.Adapters
                 var contentDisposition = await response.Content.ReadAsStreamAsync();
                 var result = await JsonSerializer.DeserializeAsync<ResponseWhisper>(contentDisposition);
                 result.IsSuccess = true;
+                result.SuccessMessage = "It may take 3 to 5 minutes to translate the audio";
                 return result;
             }
             else

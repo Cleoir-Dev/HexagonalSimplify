@@ -1,4 +1,5 @@
-﻿using Domain.Entities.Whisper;
+﻿using Domain.Entities.Speech;
+using Domain.Entities.Whisper;
 
 namespace Domain.Services
 {
@@ -6,5 +7,6 @@ namespace Domain.Services
     {
         Task<ResponseWhisper> AudioToText(RequestWhisper requestWhisper);
         Task<ResponseWhisper> GetStatusAndResponse(string uuid);
+        Task<ResponseSpeech> AudioPortugueseBR(RequestWhisper requestWhisper);
     }
 }

@@ -23,7 +23,7 @@ namespace Domain.Entities.Whisper
 
         public object logs { get; set; }
 
-        public object output { get; set; }
+        public OutputWhisper output { get; set; }
 
         [JsonPropertyName("started_at")]
         public object started_at { get; set; }
