@@ -7,6 +7,11 @@ using Microsoft.Net.Http.Headers;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.WebHost.ConfigureKestrel(c =>
+{
+    c.Limits.KeepAliveTimeout = TimeSpan.FromMinutes(10);
+});
+
 // Add services to the container.
 
 builder.Services.AddControllers();

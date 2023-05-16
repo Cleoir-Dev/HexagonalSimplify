@@ -1,11 +1,4 @@
-﻿using Domain.Entities.Whisper;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Domain.Entities.Whisper
+﻿namespace Domain.Entities.Whisper
 {
     public class OutputWhisper
     {
@@ -13,4 +6,4 @@ namespace Domain.Entities.Whisper
         public string transcription { get; set; }
         public string detected_language { get; set; }
     }
- }
+}

@@ -3,7 +3,6 @@ using Domain.Entities.ChatGpt;
 using Domain.Entities.Speech;
 using Domain.Entities.Whisper;
 using Domain.Services;
-using System;
 
 namespace Application.Services
 {
@@ -58,11 +57,12 @@ namespace Application.Services
             {
                 conversion = await GetStatusAndResponse(whisper.id);
 
-                if(conversion.status == "succeeded") 
-                { 
-                  result = await _chatGptService.ChatSpeech(new RequestGpt { 
-                      inputTxt = $"Translate the following text into Portuguese BR and rewrite it in more common language: { conversion.output.transcription }" 
-                  });
+                if (conversion.status == "succeeded")
+                {
+                    result = await _chatGptService.ChatSpeech(new RequestGpt
+                    {
+                        inputTxt = $"Translate the following text into Portuguese BR and rewrite it in more common language: {conversion.output.transcription}"
+                    });
                 }
 
             } while (conversion.status == "processing" || conversion.status == "starting");

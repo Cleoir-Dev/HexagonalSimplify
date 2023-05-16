@@ -30,5 +30,26 @@ namespace Api.Controllers
                 return BadRequest(result.ErrorMessage);
             }
         }
+
+        [HttpPost("convert-pdf-audiobook")]
+        public async Task<IActionResult> ConvertPDFToAudiobook(IFormFile pdfFile)
+        {
+            try
+            {
+                // Verifica se foi enviado um arquivo PDF na requisição
+                if (pdfFile == null || pdfFile.Length == 0)
+                    return BadRequest("Nenhum arquivo PDF foi enviado.");
+
+                var stream = pdfFile.OpenReadStream();
+                var hlsFiles = await _speechService.ConvertPDFToAudiobook(stream);
+
+                return Ok(hlsFiles);
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, "Ocorreu um erro ao converter o PDF para audiobook: " + e);
+            }
+        }
+
     }
 }

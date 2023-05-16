@@ -1,9 +1,6 @@
-﻿using Domain.Entities.Speech;
-using Domain.Entities.Whisper;
+﻿using Domain.Entities.Whisper;
 using Domain.Services;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace Api.Controllers
 {

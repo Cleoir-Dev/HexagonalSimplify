@@ -1,8 +1,6 @@
 ﻿using Domain.Adapters;
-using Domain.Entities.Speech;
 using Domain.Entities.Whisper;
 using Microsoft.Extensions.Configuration;
-using System.IO;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Text.Json;
@@ -25,7 +23,7 @@ namespace Infra.Adapters
 
         public async Task<ResponseWhisper> PostAsync(RequestWhisper requestWhisper)
         {
- 
+
             var response = await _httpClient.PostAsync($"{REPLICATE_URL_API}",
                 new StringContent(JsonSerializer.Serialize(requestWhisper),
             Encoding.UTF8, "application/json"));
